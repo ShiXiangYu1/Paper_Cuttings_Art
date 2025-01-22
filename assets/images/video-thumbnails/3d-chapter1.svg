@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+    <!-- 背景 -->
+    <rect width="1280" height="720" fill="#f5f5f5"/>
+    
+    <!-- 装饰图案 -->
+    <g transform="translate(640,360)" fill="none" stroke="#e85a71" stroke-width="3">
+        <circle r="200" opacity="0.1"/>
+        <circle r="150" opacity="0.2"/>
+        <circle r="100" opacity="0.3"/>
+    </g>
+    
+    <!-- 主要图形 -->
+    <g transform="translate(640,360)">
+        <!-- 立体纸片效果 -->
+        <path d="M-100,50 L0,-100 L100,50 Z" fill="#fff" stroke="#333" stroke-width="2" transform="rotate(-10)"/>
+        <path d="M-80,40 L0,-80 L80,40 Z" fill="#f8f8f8" stroke="#333" stroke-width="2"/>
+        <path d="M-60,30 L0,-60 L60,30 Z" fill="#fff" stroke="#333" stroke-width="2" transform="rotate(10)"/>
+    </g>
+    
+    <!-- 标题 -->
+    <text x="640" y="600" font-family="Arial" font-size="48" fill="#333" text-anchor="middle">
+        立体剪纸基础
+    </text>
+    
+    <!-- 章节标记 -->
+    <text x="640" y="660" font-family="Arial" font-size="36" fill="#666" text-anchor="middle">
+        第一章
+    </text>
+</svg> 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+    <!-- 背景 -->
+    <rect width="1280" height="720" fill="#fff5f5"/>
+    
+    <!-- 装饰网格 -->
+    <g transform="translate(640,360)" stroke="#ddd" stroke-width="1">
+        <line x1="-200" y1="0" x2="200" y2="0" opacity="0.3"/>
+        <line x1="0" y1="-200" x2="0" y2="200" opacity="0.3"/>
+        <circle r="100" fill="none" opacity="0.3"/>
+        <circle r="150" fill="none" opacity="0.2"/>
+    </g>
+    
+    <!-- 主要图形：空间结构 -->
+    <g transform="translate(640,360)">
+        <!-- 前面 -->
+        <path d="M-100,-100 L100,-100 L100,100 L-100,100 Z" 
+              fill="#fff" stroke="#333" stroke-width="2" transform="skewY(10)"/>
+        <!-- 侧面 -->
+        <path d="M100,-100 L150,-50 L150,150 L100,100 Z" 
+              fill="#f8f8f8" stroke="#333" stroke-width="2"/>
+        <!-- 顶面 -->
+        <path d="M-100,-100 L100,-100 L150,-50 L-50,-50 Z" 
+              fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    </g>
+    
+    <!-- 标题 -->
+    <text x="640" y="600" font-family="Arial" font-size="48" fill="#333" text-anchor="middle">
+        空间结构设计
+    </text>
+    
+    <!-- 章节标记 -->
+    <text x="640" y="660" font-family="Arial" font-size="36" fill="#666" text-anchor="middle">
+        第三章
+    </text>
+</svg> 

@@ -290,6 +290,33 @@
     margin-top: var(--spacing-sm);
 }
 
+/* 视频播放器样式 */
+.chapter-video {
+    margin-bottom: var(--spacing-md);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    background: var(--color-background-dark);
+}
+
+.chapter-video video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--color-background-dark);
+    object-fit: cover;
+}
+
+/* 视频缩略图样式 */
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .course-header h1 {
@@ -328,5 +355,10 @@
 
     .inspiration-quote p {
         font-size: 1rem;
+    }
+
+    .chapter-video {
+        margin: 0 -var(--spacing-sm);
+        border-radius: 0;
     }
 } 

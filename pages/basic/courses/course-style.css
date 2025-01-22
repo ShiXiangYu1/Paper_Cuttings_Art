@@ -269,4 +269,562 @@
     .preparation-list {
         grid-template-columns: 1fr;
     }
+}
+
+/* 图形展示样式 */
+.shapes-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+}
+
+.shape-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    background: var(--color-background);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.shape-example:hover {
+    transform: translateY(-5px);
+}
+
+.shape-original {
+    aspect-ratio: 1;
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: var(--color-background-alt);
+}
+
+.original-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.shape-original:hover .original-image {
+    transform: scale(1.05);
+}
+
+.shape-svg {
+    aspect-ratio: 1;
+    width: 100%;
+    background: var(--color-background-alt);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm);
+}
+
+.shape-svg svg {
+    width: 100%;
+    height: 100%;
+    animation: drawShape 1.5s ease-out forwards;
+}
+
+.shape-example figcaption {
+    grid-column: 1 / -1;
+    color: var(--color-primary);
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: center;
+    margin: var(--spacing-sm) 0;
+}
+
+.shape-description {
+    grid-column: 1 / -1;
+    color: var(--color-text-light);
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* 高级图形样式 */
+.shapes-gallery.advanced .shape-svg {
+    background: linear-gradient(135deg, var(--color-background-alt) 0%, var(--color-background) 100%);
+}
+
+.shapes-gallery.advanced .shape-example {
+    border: 1px solid var(--color-border);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .shape-example {
+        grid-template-columns: 1fr;
+    }
+    
+    .shape-original,
+    .shape-svg {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* SVG动画效果 */
+@keyframes drawShape {
+    from {
+        opacity: 0;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+    to {
+        opacity: 1;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+    }
+}
+
+/* 传统纹样展示模块样式 */
+.patterns-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.pattern-showcase-item {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--color-background-light);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pattern-showcase-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.pattern-showcase-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    aspect-ratio: 1;
+}
+
+.showcase-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.pattern-showcase-item:hover .showcase-image {
+    transform: scale(1.05);
+}
+
+.pattern-showcase-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pattern-showcase-content h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-primary-light);
+    padding-bottom: 0.5rem;
+}
+
+.pattern-analysis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.analysis-svg {
+    width: 200px;
+    height: 200px;
+}
+
+.analysis-svg path,
+.analysis-svg rect,
+.analysis-svg circle {
+    animation: drawPattern 2s ease forwards;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+@keyframes drawPattern {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.pattern-details h4 {
+    color: var(--color-text-dark);
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.pattern-details h4::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 1em;
+    background: var(--color-primary);
+    margin-right: 0.5rem;
+    border-radius: 2px;
+}
+
+.feature-list,
+.technique-list {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-list li,
+.technique-list li {
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: -1em;
+}
+
+.technique-list li {
+    counter-increment: step;
+}
+
+.technique-list li::before {
+    content: counter(step);
+    color: var(--color-primary);
+    font-weight: bold;
+    position: absolute;
+    left: -1.5em;
+}
+
+/* 创作建议样式 */
+.creation-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.tip-item {
+    background: var(--color-background-light);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tip-item h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* 响应式布局 */
+@media (max-width: 1024px) {
+    .pattern-showcase-item {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .pattern-showcase-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .pattern-analysis {
+        padding: 0.8rem;
+    }
+
+    .analysis-svg {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .patterns-showcase {
+        gap: 2rem;
+    }
+
+    .pattern-showcase-item {
+        padding: 1.5rem;
+    }
+
+    .pattern-showcase-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .pattern-details h4 {
+        font-size: 1.1rem;
+    }
+
+    .creation-tips {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .pattern-showcase-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .analysis-svg {
+        width: 160px;
+        height: 160px;
+    }
+
+    .feature-list,
+    .technique-list {
+        padding-left: 1.2rem;
+    }
+}
+
+/* 传统剪纸技法展示 */
+.traditional-techniques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+}
+
+.technique-showcase-item {
+    background: var(--color-background-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.technique-showcase-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.technique-showcase-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.technique-showcase-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.technique-showcase-item:hover .technique-showcase-image img {
+    transform: scale(1.05);
+}
+
+.technique-showcase-content {
+    padding: var(--spacing-md);
+}
+
+.technique-showcase-content h3 {
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--color-primary-light);
+}
+
+.technique-showcase-description {
+    margin-bottom: var(--spacing-md);
+}
+
+.technique-showcase-description p {
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+}
+
+.technique-showcase-features,
+.technique-showcase-steps {
+    margin-bottom: var(--spacing-md);
+}
+
+.technique-showcase-features h4,
+.technique-showcase-steps h4 {
+    color: var(--color-primary);
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-xs);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--color-primary-light);
+}
+
+.technique-showcase-features ul {
+    list-style: none;
+    padding-left: var(--spacing-md);
+}
+
+.technique-showcase-features li {
+    position: relative;
+    margin-bottom: var(--spacing-xs);
+    padding-left: var(--spacing-sm);
+}
+
+.technique-showcase-features li::before {
+    content: "•";
+    position: absolute;
+    left: -1em;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.technique-showcase-steps ol {
+    list-style: none;
+    padding-left: var(--spacing-md);
+    counter-reset: step;
+}
+
+.technique-showcase-steps li {
+    position: relative;
+    margin-bottom: var(--spacing-xs);
+    padding-left: var(--spacing-md);
+    counter-increment: step;
+}
+
+.technique-showcase-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: -1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.technique-showcase-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+.technique-showcase-svg svg {
+    width: 80%;
+    height: 80%;
+    animation: drawTechnique 1.5s ease-in-out;
+}
+
+@keyframes drawTechnique {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.technique-showcase-tips {
+    background: var(--color-background-light);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    margin-top: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.technique-showcase-tips h3 {
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.technique-showcase-tips .tips-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.technique-showcase-tips .tips-list li {
+    position: relative;
+    padding-left: var(--spacing-lg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.technique-showcase-tips .tips-list li::before {
+    content: "⚠️";
+    position: absolute;
+    left: 0;
+    font-size: 1.1em;
+}
+
+/* 响应式布局调整 */
+@media (max-width: 1024px) {
+    .traditional-techniques {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .technique-showcase-item {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .technique-showcase-content {
+        padding: var(--spacing-sm);
+    }
+    
+    .technique-showcase-svg {
+        padding: var(--spacing-sm);
+    }
+    
+    .technique-showcase-svg svg {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .technique-showcase-features h4,
+    .technique-showcase-steps h4 {
+        font-size: var(--font-size-sm);
+    }
+    
+    .technique-showcase-steps li::before {
+        width: 1.2em;
+        height: 1.2em;
+        left: -1.2em;
+    }
 } 
