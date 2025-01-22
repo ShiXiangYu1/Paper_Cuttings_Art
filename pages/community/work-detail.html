@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品详情 - 剪纸社区</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.bytedance.com/font-awesome/6.0.0/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <main class="work-detail-container">
+        <!-- 作品展示区 -->
+        <section class="work-showcase">
+            <div class="work-image-gallery">
+                <div class="main-image">
+                    <img src="../../assets/images/placeholder.svg" alt="作品主图">
+                </div>
+                <div class="image-thumbnails">
+                    <!-- 缩略图将通过JavaScript动态加载 -->
+                </div>
+            </div>
+            
+            <div class="work-info-panel">
+                <div class="work-header">
+                    <h1 class="work-title">美丽的蝴蝶</h1>
+                    <div class="work-actions">
+                        <button class="action-btn like-btn" title="点赞">
+                            <i class="fas fa-heart"></i>
+                            <span class="count">128</span>
+                        </button>
+                        <button class="action-btn collect-btn" title="收藏">
+                            <i class="fas fa-star"></i>
+                            <span class="count">56</span>
+                        </button>
+                        <button class="action-btn share-btn" title="分享">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="work-meta">
+                    <div class="category-tags">
+                        <span class="category">传统剪纸</span>
+                        <div class="tags">
+                            <span class="tag">动物</span>
+                            <span class="tag">蝴蝶</span>
+                            <span class="tag">传统工艺</span>
+                        </div>
+                    </div>
+                    <div class="publish-info">
+                        发布于 2024-01-22
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <a href="user-profile.html?id=123" class="author-avatar">
+                        <img src="../../assets/images/avatar-placeholder.svg" alt="作者头像">
+                    </a>
+                    <div class="author-info">
+                        <a href="user-profile.html?id=123" class="author-name">张小明</a>
+                        <p class="author-bio">热爱传统剪纸艺术的手工艺人</p>
+                    </div>
+                    <button class="follow-btn">
+                        <i class="fas fa-plus"></i>
+                        关注
+                    </button>
+                </div>
+
+                <div class="work-description">
+                    <h2>作品介绍</h2>
+                    <p>这是一幅以蝴蝶为主题的传统剪纸作品，采用了传统的剪纸技法，表现了蝴蝶翩翩起舞的美感。作品灵感来源于...</p>
+                    <div class="techniques">
+                        <h3>创作技法</h3>
+                        <ul>
+                            <li>阳刻法</li>
+                            <li>镂空技法</li>
+                            <li>对称剪裁</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 评论区 -->
+        <section class="comments-section">
+            <h2>评论区 <span class="comment-count">(32)</span></h2>
+            
+            <div class="comment-form">
+                <div class="user-avatar">
+                    <img src="../../assets/images/avatar-placeholder.jpg" alt="用户头像">
+                </div>
+                <div class="comment-input-wrapper">
+                    <textarea placeholder="说说你的看法..." class="comment-input"></textarea>
+                    <div class="comment-actions">
+                        <button class="emoji-btn">
+                            <i class="far fa-smile"></i>
+                        </button>
+                        <button class="submit-comment">发表评论</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comments-list">
+                <!-- 评论将通过JavaScript动态加载 -->
+            </div>
+
+            <div class="load-more-comments">
+                <button id="loadMoreCommentsBtn">加载更多评论</button>
+            </div>
+        </section>
+
+        <!-- 相关作品推荐 -->
+        <section class="related-works">
+            <h2>相关作品</h2>
+            <div class="related-works-grid">
+                <!-- 相关作品将通过JavaScript动态加载 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 分享弹窗 -->
+    <div class="share-modal" id="shareModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>分享作品</h3>
+                <button class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="share-options">
+                <button class="share-option wechat">
+                    <i class="fab fa-weixin"></i>
+                    微信
+                </button>
+                <button class="share-option weibo">
+                    <i class="fab fa-weibo"></i>
+                    微博
+                </button>
+                <button class="share-option qq">
+                    <i class="fab fa-qq"></i>
+                    QQ
+                </button>
+                <button class="share-option link">
+                    <i class="fas fa-link"></i>
+                    复制链接
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="work-detail.js"></script>
+</body>
+</html> 

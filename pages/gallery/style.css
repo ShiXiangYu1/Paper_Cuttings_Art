@@ -1,0 +1,214 @@
+/* 作品展示页面样式 */
+:root {
+    --gallery-spacing: 2rem;
+    --card-radius: 12px;
+    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --transition-duration: 0.3s;
+}
+
+.gallery-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+/* 页面介绍 */
+.gallery-intro {
+    text-align: center;
+    margin-bottom: var(--gallery-spacing);
+}
+
+.gallery-intro h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 精选作品 */
+.featured-works {
+    margin-bottom: var(--gallery-spacing);
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--gallery-spacing);
+}
+
+.featured-card {
+    background: var(--color-background);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-duration);
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+}
+
+.work-preview {
+    height: 250px;
+    background: var(--color-background-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+.work-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.work-info {
+    padding: var(--spacing-md);
+}
+
+.work-info h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.work-desc {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.work-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+/* 作品分类 */
+.work-categories {
+    margin-bottom: var(--gallery-spacing);
+}
+
+.category-tabs {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--gallery-spacing);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+}
+
+.category-tab {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--color-primary);
+    border-radius: 20px;
+    background: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all var(--transition-duration);
+    white-space: nowrap;
+}
+
+.category-tab:hover,
+.category-tab.active {
+    background: var(--color-primary);
+    color: var(--color-background);
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--gallery-spacing);
+}
+
+.work-card {
+    background: var(--color-background);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-duration);
+}
+
+.work-card:hover {
+    transform: translateY(-3px);
+}
+
+/* 最新作品 */
+.latest-works {
+    margin-bottom: var(--gallery-spacing);
+}
+
+.latest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.latest-card {
+    background: var(--color-background);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+/* 分享作品 */
+.submit-work {
+    text-align: center;
+    padding: var(--gallery-spacing) 0;
+    background: var(--color-background-alt);
+    border-radius: var(--card-radius);
+    margin-bottom: var(--gallery-spacing);
+}
+
+.submit-work h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.submit-work p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .gallery-intro h1 {
+        font-size: 2rem;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-tabs {
+        justify-content: flex-start;
+    }
+
+    .works-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .work-preview {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-content {
+        padding: var(--spacing-md);
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-meta {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+} 

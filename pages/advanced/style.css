@@ -1,0 +1,253 @@
+/* 进阶教程页面样式 */
+.advanced-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* 页面介绍部分 */
+.advanced-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg) 0;
+}
+
+.advanced-intro h1 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 技能分类卡片 */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.category-card {
+    background: var(--color-background);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-md);
+}
+
+.category-card h3 {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-md) 0;
+}
+
+.skill-list li {
+    padding: var(--spacing-xs) 0;
+    color: var(--color-text);
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.skill-list li::before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: 0.5em;
+}
+
+/* 高级技法部分 */
+.techniques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.technique-card {
+    display: flex;
+    align-items: center;
+    background: var(--color-background);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.technique-demo {
+    width: 100px;
+    height: 100px;
+    margin-right: var(--spacing-md);
+    background: var(--color-background-alt);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.technique-content {
+    flex: 1;
+}
+
+.technique-content h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* 创作流程部分 */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+}
+
+.process-step {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: var(--color-background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-sm);
+    font-weight: bold;
+}
+
+.process-step h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* 大师经验分享部分 */
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+}
+
+.insight-card {
+    display: flex;
+    align-items: flex-start;
+    background: var(--color-background);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.master-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--color-background-alt);
+    border-radius: 50%;
+    margin-right: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.insight-content h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.master-name {
+    display: block;
+    color: var(--color-text-light);
+    margin-top: var(--spacing-xs);
+    font-style: italic;
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn--primary:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+}
+
+.btn--secondary {
+    background: var(--color-background-alt);
+    color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+    background: var(--color-background);
+    transform: translateY(-2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .advanced-intro h1 {
+        font-size: 2rem;
+    }
+
+    .categories-grid,
+    .techniques-grid,
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .technique-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .technique-demo {
+        margin: 0 auto var(--spacing-md);
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .insight-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .master-avatar {
+        margin: 0 auto var(--spacing-md);
+    }
+} 

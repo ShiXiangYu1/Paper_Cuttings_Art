@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <pattern id="pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect width="20" height="20" fill="#f5f5f5"/>
+            <path d="M0,10 L20,10 M10,0 L10,20" stroke="#eee" stroke-width="2"/>
+        </pattern>
+    </defs>
+    <rect width="1200" height="300" fill="url(#pattern)"/>
+    <text x="600" y="150" font-family="Arial" font-size="24" fill="#999" text-anchor="middle" dominant-baseline="middle">
+        个人主页封面
+    </text>
+</svg> 

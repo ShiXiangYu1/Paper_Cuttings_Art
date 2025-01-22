@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剪纸社区 - 分享你的作品</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 使用字节跳动CDN加载Font Awesome图标 -->
+    <link href="https://cdn.bytedance.com/font-awesome/6.0.0/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header class="community-header">
+        <h1>剪纸艺术社区</h1>
+        <p class="subtitle">在这里分享你的作品，与其他剪纸爱好者交流</p>
+    </header>
+
+    <nav class="community-nav">
+        <a href="#" class="active">最新作品</a>
+        <a href="#">热门作品</a>
+        <a href="submit.html" class="submit-btn">发布作品</a>
+    </nav>
+
+    <main class="community-main">
+        <section class="works-filter">
+            <div class="search-box">
+                <input type="text" placeholder="搜索作品...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="filter-tags">
+                <button class="tag active">全部</button>
+                <button class="tag">传统</button>
+                <button class="tag">现代</button>
+                <button class="tag">动物</button>
+                <button class="tag">植物</button>
+            </div>
+        </section>
+
+        <section class="works-grid">
+            <!-- 作品卡片模板 -->
+            <article class="work-card">
+                <div class="work-image">
+                    <img src="../../assets/images/placeholder.svg" alt="作品示例">
+                </div>
+                <div class="work-info">
+                    <h3>美丽的蝴蝶</h3>
+                    <p class="author">作者：张小明</p>
+                    <div class="work-stats">
+                        <span><i class="fas fa-heart"></i> 128</span>
+                        <span><i class="fas fa-comment"></i> 32</span>
+                    </div>
+                </div>
+            </article>
+            <!-- 更多作品卡片将通过JavaScript动态加载 -->
+        </section>
+
+        <div class="load-more">
+            <button id="loadMoreBtn">加载更多</button>
+        </div>
+    </main>
+
+    <aside class="community-sidebar">
+        <section class="user-ranking">
+            <h2>活跃用户榜</h2>
+            <ul class="ranking-list">
+                <!-- 用户排名将通过JavaScript动态加载 -->
+            </ul>
+        </section>
+    </aside>
+
+    <script src="index.js"></script>
+</body>
+</html> 

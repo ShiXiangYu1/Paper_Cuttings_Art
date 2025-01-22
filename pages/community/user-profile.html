@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户主页 - 剪纸社区</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.bytedance.com/font-awesome/6.0.0/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <main class="profile-container">
+        <!-- 用户信息头部 -->
+        <section class="profile-header">
+            <div class="profile-cover">
+                <img src="../../assets/images/cover-placeholder.svg" alt="封面图">
+                <button class="edit-cover">
+                    <i class="fas fa-camera"></i>
+                    更换封面
+                </button>
+            </div>
+            
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="../../assets/images/avatar-placeholder.svg" alt="用户头像">
+                    <button class="edit-avatar">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="profile-name-wrap">
+                        <h1 class="profile-name">张小明</h1>
+                        <span class="profile-badge" title="认证剪纸艺术家">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                        <button class="follow-btn">
+                            <i class="fas fa-plus"></i>
+                            关注
+                        </button>
+                    </div>
+                    
+                    <p class="profile-bio">热爱传统剪纸艺术的手工艺人，专注于传统文化的传承与创新。</p>
+                    
+                    <div class="profile-stats">
+                        <a href="#works" class="stat-item">
+                            <span class="stat-value">128</span>
+                            <span class="stat-label">作品</span>
+                        </a>
+                        <a href="#following" class="stat-item">
+                            <span class="stat-value">256</span>
+                            <span class="stat-label">关注</span>
+                        </a>
+                        <a href="#followers" class="stat-item">
+                            <span class="stat-value">1.2k</span>
+                            <span class="stat-label">粉丝</span>
+                        </a>
+                        <div class="stat-item">
+                            <span class="stat-value">12.8k</span>
+                            <span class="stat-label">获赞</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 内容导航栏 -->
+        <nav class="profile-nav">
+            <a href="#works" class="nav-item active" data-tab="works">作品</a>
+            <a href="#collections" class="nav-item" data-tab="collections">收藏</a>
+            <a href="#following" class="nav-item" data-tab="following">关注</a>
+            <a href="#followers" class="nav-item" data-tab="followers">粉丝</a>
+            <a href="#about" class="nav-item" data-tab="about">关于</a>
+        </nav>
+
+        <!-- 作品展示区 -->
+        <section id="works" class="profile-content active">
+            <div class="content-header">
+                <h2>作品展示</h2>
+                <div class="content-filters">
+                    <div class="filter-group">
+                        <button class="filter-btn active">全部</button>
+                        <button class="filter-btn">传统</button>
+                        <button class="filter-btn">现代</button>
+                        <button class="filter-btn">教程</button>
+                    </div>
+                    <div class="sort-group">
+                        <select class="sort-select">
+                            <option value="latest">最新发布</option>
+                            <option value="popular">最受欢迎</option>
+                            <option value="commented">评论最多</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="works-grid">
+                <!-- 作品将通过JavaScript动态加载 -->
+            </div>
+            
+            <button class="load-more-btn">加载更多</button>
+        </section>
+
+        <!-- 收藏展示区 -->
+        <section id="collections" class="profile-content">
+            <div class="content-header">
+                <h2>我的收藏</h2>
+                <div class="content-filters">
+                    <div class="filter-group">
+                        <button class="filter-btn active">全部收藏</button>
+                        <button class="filter-btn">作品</button>
+                        <button class="filter-btn">教程</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collections-grid">
+                <!-- 收藏将通过JavaScript动态加载 -->
+            </div>
+            
+            <button class="load-more-btn">加载更多</button>
+        </section>
+
+        <!-- 关注列表 -->
+        <section id="following" class="profile-content">
+            <div class="content-header">
+                <h2>关注列表</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索关注的用户...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            
+            <div class="users-grid">
+                <!-- 关注用户将通过JavaScript动态加载 -->
+            </div>
+            
+            <button class="load-more-btn">加载更多</button>
+        </section>
+
+        <!-- 粉丝列表 -->
+        <section id="followers" class="profile-content">
+            <div class="content-header">
+                <h2>粉丝列表</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索粉丝...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            
+            <div class="users-grid">
+                <!-- 粉丝将通过JavaScript动态加载 -->
+            </div>
+            
+            <button class="load-more-btn">加载更多</button>
+        </section>
+
+        <!-- 关于信息 -->
+        <section id="about" class="profile-content">
+            <div class="about-card">
+                <h2>个人信息</h2>
+                <div class="info-group">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>北京市朝阳区</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>2020年加入</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-link"></i>
+                        <a href="#">https://example.com</a>
+                    </div>
+                </div>
+                
+                <h3>个人简介</h3>
+                <p class="about-bio">
+                    从事剪纸艺术创作10年，擅长传统题材与现代风格的结合。曾获得多个剪纸艺术奖项，作品多次在全国展览中展出。
+                    致力于通过互联网平台推广传统剪纸艺术，让更多人了解并喜爱这门传统工艺。
+                </p>
+                
+                <h3>擅长领域</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">传统剪纸</span>
+                    <span class="skill-tag">现代剪纸</span>
+                    <span class="skill-tag">民间艺术</span>
+                    <span class="skill-tag">装饰艺术</span>
+                    <span class="skill-tag">剪纸教学</span>
+                </div>
+                
+                <h3>获得成就</h3>
+                <div class="achievements">
+                    <div class="achievement-item">
+                        <i class="fas fa-trophy"></i>
+                        <div class="achievement-info">
+                            <h4>剪纸艺术大师</h4>
+                            <p>2023年度最受欢迎剪纸艺术家</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <i class="fas fa-medal"></i>
+                        <div class="achievement-info">
+                            <h4>优秀教学认证</h4>
+                            <p>平台认证剪纸艺术导师</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="user-profile.js"></script>
+</body>
+</html> 

@@ -1,0 +1,170 @@
+/* 基础教程页面样式 */
+
+/* 活动导航项样式 */
+.nav__menu a.active {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.nav__logo a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+/* 基础内容布局 */
+.basic-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* 介绍部分 */
+.basic-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.basic-intro h1 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 工具部分 */
+.tools-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.tools-section h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.tool-card {
+    background: var(--color-background);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* 课程部分 */
+.courses-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.courses-section h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.course-card {
+    background: var(--color-background);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.course-image {
+    margin-bottom: var(--spacing-sm);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-image svg {
+    width: 100px;
+    height: 100px;
+}
+
+/* 贴士部分 */
+.tips-section {
+    background-color: var(--color-background-alt);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+}
+
+.tips-section h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.tip-item {
+    background: var(--color-background);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tip-item h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .basic-intro h1 {
+        font-size: 2rem;
+    }
+    
+    .tools-grid,
+    .course-grid,
+    .tips-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .course-image {
+        height: 120px;
+    }
+} 

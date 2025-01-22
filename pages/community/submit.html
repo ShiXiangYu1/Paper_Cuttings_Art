@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上传作品 - 剪纸艺术学习网站</title>
+    <link rel="stylesheet" href="https://cdn.bytedance.com/css/normalize.min.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__logo"><a href="../../index.html">剪纸艺术</a></div>
+            <ul class="nav__menu">
+                <li><a href="../basic/index.html">基础教程</a></li>
+                <li><a href="../advanced/index.html">进阶技巧</a></li>
+                <li><a href="../gallery/index.html">作品展示</a></li>
+                <li><a href="index.html" class="active">交流社区</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="submit-content">
+            <section class="submit-header">
+                <h1>分享作品</h1>
+                <p class="intro-text">与大家分享您的剪纸作品，让艺术之美传递更远</p>
+            </section>
+
+            <section class="submit-form">
+                <form id="workSubmitForm" class="work-form">
+                    <div class="form-group">
+                        <label for="workTitle">作品标题</label>
+                        <input type="text" id="workTitle" name="title" required 
+                               placeholder="请输入作品标题（如：春之韵）">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workCategory">作品类别</label>
+                        <select id="workCategory" name="category" required>
+                            <option value="">请选择作品类别</option>
+                            <option value="traditional">传统纹样</option>
+                            <option value="modern">现代创意</option>
+                            <option value="3d">立体作品</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workDesc">作品描述</label>
+                        <textarea id="workDesc" name="description" rows="4" required
+                                  placeholder="请描述您的作品创作理念和技法运用（200字以内）"></textarea>
+                        <div class="char-count">0/200</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>使用技法</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="techniques" value="layered">
+                                镂空层叠
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="techniques" value="symmetry">
+                                对称剪裁
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="techniques" value="3d">
+                                立体造型
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="techniques" value="pattern">
+                                纹样组合
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group upload-group">
+                        <label>作品图片</label>
+                        <div class="upload-area" id="uploadArea">
+                            <input type="file" id="workImage" name="image" accept="image/*" multiple
+                                   class="file-input" required>
+                            <div class="upload-placeholder">
+                                <svg viewBox="0 0 24 24" class="upload-icon">
+                                    <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" 
+                                          fill="currentColor"/>
+                                </svg>
+                                <p>点击或拖拽上传图片</p>
+                                <p class="upload-tip">支持jpg、png格式，最多5张，单张不超过5MB</p>
+                            </div>
+                        </div>
+                        <div class="preview-area" id="previewArea"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workTags">作品标签</label>
+                        <div class="tags-input-container">
+                            <input type="text" id="workTags" 
+                                   placeholder="输入标签后按回车，最多添加5个标签">
+                            <div class="tags-container"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn--secondary" id="previewBtn">预览</button>
+                        <button type="submit" class="btn btn--primary">提交作品</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- 预览模态框 -->
+            <div class="preview-modal" id="previewModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>作品预览</h2>
+                        <button class="close-btn">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="preview-work">
+                            <div class="preview-images"></div>
+                            <div class="preview-info">
+                                <h3 class="preview-title"></h3>
+                                <p class="preview-category"></p>
+                                <p class="preview-desc"></p>
+                                <div class="preview-techniques"></div>
+                                <div class="preview-tags"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn--secondary" id="editBtn">继续编辑</button>
+                        <button class="btn btn--primary" id="confirmBtn">确认提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 剪纸艺术学习网站 - 让传统文化焕发新生机</p>
+    </footer>
+
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/workStorage.js"></script>
+    <script src="submit.js"></script>
+</body>
+</html> 

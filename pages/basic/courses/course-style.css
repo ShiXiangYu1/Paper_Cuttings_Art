@@ -1,0 +1,272 @@
+/* 课程内容样式 */
+.course-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* 课程导航 */
+.course-nav {
+    margin: var(--spacing-md) 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-nav__back,
+.course-nav__next {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.course-nav__back:hover,
+.course-nav__next:hover {
+    transform: translateX(-5px);
+}
+
+.course-nav__next:hover {
+    transform: translateX(5px);
+}
+
+/* 课程标题 */
+.lesson-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.lesson-header h1 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.lesson-intro {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 课程章节 */
+.lesson-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.lesson-section h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+/* 准备工作列表 */
+.preparation-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.preparation-item {
+    background: var(--color-background);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.preparation-item h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+/* 图形展示网格 */
+.shapes-grid,
+.patterns-grid,
+.techniques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.shape-card,
+.pattern-card,
+.technique-card {
+    background: var(--color-background);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shape-demo,
+.pattern-demo,
+.technique-demo {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+    background-color: var(--color-background-alt);
+    border-radius: var(--border-radius);
+}
+
+.shape-demo svg,
+.pattern-demo svg,
+.technique-demo svg {
+    width: 100px;
+    height: 100px;
+}
+
+.shape-card h3,
+.pattern-card h3,
+.technique-card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+/* 步骤列表 */
+.steps-list {
+    padding-left: var(--spacing-md);
+    color: var(--color-text);
+}
+
+.steps-list li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* 提示框 */
+.tips-box {
+    background-color: var(--color-background-alt);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-lg);
+}
+
+.tips-list,
+.detail-list,
+.solution-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tips-list li,
+.detail-list li,
+.solution-list li {
+    margin-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+    position: relative;
+}
+
+.tips-list li::before,
+.detail-list li::before,
+.solution-list li::before {
+    content: "•";
+    color: var(--color-primary);
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -0.2em;
+}
+
+/* 练习建议 */
+.practice-tips,
+.technique-tips,
+.advanced-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.practice-tip,
+.technique-tip,
+.advanced-tip {
+    background: var(--color-background);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.practice-tip h3,
+.technique-tip h3,
+.advanced-tip h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+/* 纹样介绍 */
+.pattern-intro {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* 工具使用技巧 */
+.tools-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* 问题与解决方案 */
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.problem-card {
+    background: var(--color-background);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.problem-card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.problem {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-sm);
+    font-style: italic;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .lesson-header h1 {
+        font-size: 2rem;
+    }
+    
+    .shapes-grid,
+    .patterns-grid,
+    .techniques-grid,
+    .practice-tips,
+    .technique-tips,
+    .advanced-tips,
+    .tools-tips,
+    .problems-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .shape-demo,
+    .pattern-demo,
+    .technique-demo {
+        height: 120px;
+    }
+    
+    .preparation-list {
+        grid-template-columns: 1fr;
+    }
+} 
